@@ -4,43 +4,59 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void) {
-	double a, b, result; 
+	int x, y, z, m;
+	int a, b, c;
+	x = 2;
+	z = 1;
+	a = 3;
+	b = 4;
+	c = 5;
+	y = a * x * x + b * x + c;
+	m = (x + y + z) / 3;
 	
-	printf("enter two intergers : ");
-	scanf("%1f %1f", &a, &b);
+	printf("y=%d, m=%d", y, m); 
 	
-	result = a / b;
+	int d, f;
+	printf("input two integers : ");
+	scanf("%i %i", &d, &f);
 	
-	printf("%.61f / %.61f = %.61f\n", a, b, result);
+	printf("%d + %d = %d\n", d, f, d + f);
+	printf("%d - %d = %d\n", d, f, d - f);
+	printf("%d * %d = %d\n", d, f, d * f);
+	printf("%d / %d = %d\n", d, f, d / f);
+	printf("%d %% %d = %d\n", d, f, d % f);
 	
-		char ch;
+	int total_sec, min, sec;
 	
-	printf("enter a character : ");
-	scanf("%c", &ch);
+	printf("Input the second : ");
+	scanf("%d", &total_sec);
 	
-	char next_ch = ch + 1;
+	min = total_sec / 60;
+	sec = total_sec % 60;
 	
-	printf("the next character of %c iand its ASCII value is %i.\n", next_ch, next_ch);
+	printf("The time is %d : %d\n", min, sec);
 	
-	char c;
-	int i;
+	int year, is_leap;
 	
-	printf("input a number : ");
-	scanf("%c", &c);
+	printf("Input the year : ");
+	scanf("%d", &year);
 	
-	i = c - '0';
-	printf("The input number is %i\n", i);
+	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))	
+	is_leap = 1;
+	else
+	is_leap = 0;
 	
-	int input_int;
-	float input_float;
+	printf("Is the year %d the leap year? %d\n", year, is_leap);
 	
-	printf("enter an integer : ");
-	scanf("%d", &input_int);
+	int e,g; 
+	printf("Input two integers : ");
+	scanf("%i %i", &e, &g);
 	
-	printf("enter a float : ");
-	scanf("%f", &input_float);
+	printf("result is %d\n", e & g);
+	printf("result is %d\n", e | g);
+	printf("result is %d\n", e ^ g);
+	printf("result is %d\n", e << g);
+	printf("result is %d\n", e >> g);
 	
-	printf("integer : %d, float :k %f\n", input_int, input_float);
-
 	return 0;
 }
