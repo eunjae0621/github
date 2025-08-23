@@ -3,17 +3,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int input_int;
-	float input_float;
+int main(void) 
+{
+	char c; // 사용자가 입력할 한자리 문자형 숫자 
+	int i; // 변환된 정수 숫자 
 	
-	printf("enter an integer : ");
-	scanf("%d", &input_int);
+	printf("input a number :");
+	scanf("%c", &c); 
 	
-	printf("enter a float : ");
-	scanf("%f", &input_float);
-	
-	printf("integer : %d, float : %f\n", input_int, input_float);
+	i =  c - '0'; // 문자형 숫자를 정수 숫자로 변환하는 식 
+	printf("The input number is %i\n", i);
 	
 	return 0;
 }
